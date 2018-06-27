@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class DVMCard;
 
 @interface DVMCardController : NSObject
+
+NS_ASSUME_NONNULL_BEGIN
+
++ (instancetype)sharedController;
+
+- (void)drawNewCard:(NSInteger)numberOfCards completion:(void(^) (NSArray<DVMCard *> *cards, NSError *error))completion;
+- (void)fetchCardImage:(DVMCard *)card completion:(void(^) (UIImage *image, NSError *error))completion;
+
+NS_ASSUME_NONNULL_END
 
 @end
