@@ -15,4 +15,6 @@
 
 - (instancetype)initWithSuit:(NSString *)suit image:(NSString *)image;
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary; 
+
 @end
