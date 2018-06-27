@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  DVMCardViewController.h
 //  DeckOfCardsObjectiveC
 //
-//  Created by Nick Reichard on 6/22/18.
+//  Created by Nick Reichard on 6/27/18.
 //  Copyright © 2018 Nick Reichard. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DVMCardViewController : UIViewController
 
 @end
-
