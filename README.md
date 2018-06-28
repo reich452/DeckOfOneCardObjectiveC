@@ -37,7 +37,19 @@ Note:
 
 * In the DVMCard.m file you should see a yellow warning. The warning is giving us a helpful hint to implement our 2 initializers. First, implement the designated initializer which is used to initialize our object with its 2 properties. All Objective C initializers are fallible, so you need to check ```if (self = [super init]) {```, then use the _underling values to equal the properties that come form the parameters, lastly return self. Now you have your designated initializer. 
 Implement the secondary initializer. We know that we need to create 2 properties that are going to come back from the JSON dictionary.  Inside the initializer, first declare the type, add the pointer to the name, set it equal to the dictionary, and then using sub-script-notation plug in the key. Your first property. It should look like this NSString *suit = dictionary[@"suit"]; . Now do the same for your second property. Then return self with the initWithSuit (you designated initializer). 
-To make our code a little safer you can add 2 class methods the return the string value key like <<<<<<<<<SOOOOO>>>>>>>. Now your property should look like this  NSString *suit = dictionary[[DVMCard suitKey]];
+To make our code a little safer you can add 2 class methods the return the string value key like 
+```
++ (NSString *)suitKey
+{
+    return @"suit";
+}
+
++ (NSString *)imageKey
+{
+    return @"image";
+}
+```
+. Now your property should look like this  NSString *suit = dictionary[[DVMCard suitKey]];
 Look at the Multiple Initializers and the Designated Initializer with this link if you get stuck.
 https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Initialization/Initialization.html
 Our model object is complete. Nice work! 
